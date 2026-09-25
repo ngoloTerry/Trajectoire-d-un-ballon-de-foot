@@ -10,7 +10,7 @@
 
 - Il faut développer un code qui simule la trajectoire d'un ballon selon certains paramètres d'entrée.
 
-- Ce code utilisera la librairie Numpy, pour tracer une courbe sur un repère cathésien.
+- Ce code utilisera la librairie Matplotlib, pour tracer une courbe sur un repère cathésien.
 
 - Le repère cartésien doit afficher la trajectoire d'une balle de football, frappée du pied depuis le sol.  
 
