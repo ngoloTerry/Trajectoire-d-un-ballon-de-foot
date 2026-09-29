@@ -66,4 +66,4 @@ Pour trouver une solution, on cherche Δ (Delta) avec la formule suivante:
 
   
 
-# Bonus: GitHub
+# Bonus: tout est posté sur GitHub

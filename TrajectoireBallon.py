@@ -14,8 +14,10 @@
 # Licence 3Dflamingo™
 
 
-import  math as m
+import math as m
+
 import matplotlib.pyplot as plt
+
 
 # Implémentation de la solution de l'équation du second degré telle que: y=-0.1x²+2x-5
 # calcul de delta: b²-4ac
@@ -46,12 +48,6 @@ def trajectoire(a, b, c):
     # a est obligatoirement négatif
     # on fait reformuler à l'utilisateur si delta est négatif ?
     
-    #
+    
 
-
-
-
-
-
-res = trajectoire(0.1,2,-5)
 
