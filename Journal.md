@@ -26,4 +26,18 @@ Il m'a alors indiqué que:
 - La section "Code numpy" est un monolithe, et qu'il faut absolument le sous-diviser. Il est vrai que je n'ai même pas pensé à réfléchir ici en quelles foctions ce code entier risque d'être sectionné.
 - Il faut revoir ce qui est attendu que l'on comprenne, mathématiquement parlant, pour mieux améliorer sa résolution de problème.
 
-En appliquant ces conseils, j'ai décidé de recommencer de 0 (ou plutôt de 1) écrivant et isolant le code de la question 1.
+En appliquant ces conseils, j'ai décidé de recommencer de 0 (ou plutôt de 1) écrivant et isolant le code de la question 1 (code_resolution.py).  
+une fois fait, il fallait que je satisfasse la question 2 dans un autre fichier(traceCourbe), en réutilisant le code déjà tapé.
+
+## 11/10/26
+### découverte et application de la librairie MatPlotLib
+Dans le sandbox, j'ai importé une version fonctionelle du code, que je découpe en morceau pour en comprendre le fonctionnement.
+dans traceCourbe.py, j'essaye de le réécrire proprement d'une manière où je peux la faire fonctionner, avec des commentaires pour la relecture.
+MatPlotLib, pour tracer une courbe, fait le lien entre des points renseignés sur un repère carthésien.
+pour tracer une courbe il faut donc 2 tableaux de valeurs: un avec les valeurs en ordonnée, l'autre avec les abscisses.
+pour remplir ces deux tableauxdes valeurs correspondantes, il nous faudra décider du nombre de valeurs, et calculer le pas entre chacun des points de coordonnées x[i]y[i]
+
+### calcul du pas de la courbe matPlotLib
+en divisant par le nombre n de points que l'on souhaite représenter sur le repère la soustraction de max(x_depart, x_arrivee) par min(x_depart, x_arrivee), on découpe en segments égaux l'intervalle sur la courbe qui représente le point de départ du ballon jusqu'à son arrivée.
+Ainsi, on sait de combien incrémenter pour passer de x[i] à x[i+1] jusqu'à x[n].
+Pour calculer la valeur de y par rapport à x, en voyant que l'écriture commençait à être chargée, je me suis dit qu'il serait logique de créer des fonctions qui allègeraient l'expression mathématique dans certaines variables.

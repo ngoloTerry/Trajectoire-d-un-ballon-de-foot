@@ -29,7 +29,7 @@ print(f"Altitude maximale : {y_max:.2f} en x = {x_sommet:.2f}")
 
 # Question 2 : tracé entre les deux racines
 N = 200
-pas = (x_arrivee - x_depart) / N
+pas = (x_arrivee - x_depart) / N # x_arrivee - x_depart = petite valeur
 x = [x_depart + i*pas for i in range(N + 1)]
 y = [a*xi**2 + b*xi + c for xi in x]
 
