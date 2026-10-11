@@ -38,6 +38,12 @@ pour tracer une courbe il faut donc 2 tableaux de valeurs: un avec les valeurs e
 pour remplir ces deux tableauxdes valeurs correspondantes, il nous faudra décider du nombre de valeurs, et calculer le pas entre chacun des points de coordonnées x[i]y[i]
 
 ### calcul du pas de la courbe matPlotLib
-en divisant par le nombre n de points que l'on souhaite représenter sur le repère la soustraction de max(x_depart, x_arrivee) par min(x_depart, x_arrivee), on découpe en segments égaux l'intervalle sur la courbe qui représente le point de départ du ballon jusqu'à son arrivée.
+En divisant par le nombre n de points que l'on souhaite représenter sur le repère la soustraction de max(x_depart, x_arrivee) par min(x_depart, x_arrivee), on découpe en segments égaux l'intervalle sur la courbe qui représente le point de départ du ballon jusqu'à son arrivée.
 Ainsi, on sait de combien incrémenter pour passer de x[i] à x[i+1] jusqu'à x[n].
 Pour calculer la valeur de y par rapport à x, en voyant que l'écriture commençait à être chargée, je me suis dit qu'il serait logique de créer des fonctions qui allègeraient l'expression mathématique dans certaines variables.
+Une fois le code matplotlib utilisé pour tracer et afficher la courbe en fonction de x et y, on a terminé la question 2.
+
+### déterminer la hauteur max de la balle
+Pour les valeurs de la consigne, si on regarde sur le graph tracé avec matplotlib, on peut voir que la valeur maximum de y=15 pour x=10.
+L'exprimer par code revient donc à récupérer le maximum des deux tableaux pour révéler la coordonnée la plus haute jamais atteinte par la balle.
+

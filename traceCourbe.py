@@ -2,6 +2,25 @@ import math as m
 
 import matplotlib.pyplot as plt
 
+# definition de fonctions mathématiques
+
+def calc_racine0(a,b): # si delta=0, il n'y a qu'une racine et est renvoyée par cette fonction
+    racine0 = -b/(2*a)  
+    return racine0
+
+# si delta>0, il y a 2 points où la courbe atteint 0, ils sont renvoyés par les fonctions ci-dessous
+def calc_racine1(a,b):
+    racine1 = (-b - m.sqrt(delta)) / (2*a)
+    return racine1
+def calc_racine2(a,b):
+    racine2 = (-b + m.sqrt(delta)) / (2*a)
+    return racine2
+
+def calc_y(a,b,c,x):
+    y = (a*x**2) + (b*x) + c
+    return y
+
+
 # Implementation des valeurs donnees sur le sujet
 a = -0.1
 b = 2
@@ -18,17 +37,17 @@ if delta < 0:
 # Sinon, on calcule alors les racines de delta
 # note: ces racines sont les valeurs de x pour lesquelles y=0
 elif delta == 0:
-    r0 = -b/(2*a)
+    r0 = calc_racine0(a,b)
 else:
-    r1 = (-b - m.sqrt(delta)) / (2*a)
-    r2 = (-b + m.sqrt(delta)) / (2*a)
+    r1 = calc_racine1(a,b)
+    r2 = calc_racine2(a,b)
     # on conserve en variables le point de départ du ballon, et l'endroit où il retouche le sol
     x_depart = min(r1,r2)
     x_arrivee = max(r1,r2)
 
 # Question 2 : tracé entre les deux racines avec matplotlib
 
-n = 100
+n = 10
 pas = (x_arrivee-x_depart)/n
 
 x=[]
@@ -42,4 +61,11 @@ for i in range(n+1):
 
 # _valeurs de y_
 for val_x in x:
-    
+    val_y=calc_y(a,b,c,val_x)
+    y.append(val_y)
+
+# tracer et afficher la courbe avec matplotlib
+plt.plot(x, y)
+plt.xlabel("x (distance)")
+plt.ylabel("y (altitude)")
+plt.show()
