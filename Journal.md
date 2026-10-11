@@ -45,5 +45,5 @@ Une fois le code matplotlib utilisé pour tracer et afficher la courbe en foncti
 
 ### déterminer la hauteur max de la balle
 Pour les valeurs de la consigne, si on regarde sur le graph tracé avec matplotlib, on peut voir que la valeur maximum de y=15 pour x=10.
-L'exprimer par code revient donc à récupérer le maximum des deux tableaux pour révéler la coordonnée la plus haute jamais atteinte par la balle.
+L'exprimer par code revient donc à récupérer le maximum du tableau de y et sa valeur correspondante pour x.
 
