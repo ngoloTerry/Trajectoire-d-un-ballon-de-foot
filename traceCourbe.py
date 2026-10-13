@@ -24,7 +24,7 @@ def calc_y(a,b,c,x):
 # Implementation des valeurs donnees sur le sujet
 a = -0.1
 b = 2
-c = 5
+c = -5
 
 # calcul de delta
 delta = b**2 - 4*a*c
@@ -47,11 +47,13 @@ else:
 
 # Question 2 : tracé entre les deux racines avec matplotlib
 
-n = 10
+n = 200
 pas = (x_arrivee-x_depart)/n
 
 x=[]
 y=[]
+
+sommet = (-b)/(2*a)
 
 # _valeurs de x_
 for i in range(n+1):
@@ -64,6 +66,8 @@ for val_x in x:
     val_y=calc_y(a,b,c,val_x)
     y.append(val_y)
 
+print("altitude maximale atteinte par la balle y = ",str(max(y)))
+print("en x = ",str(sommet))
 # tracer et afficher la courbe avec matplotlib
 plt.plot(x, y)
 plt.xlabel("x (distance)")

@@ -46,4 +46,9 @@ Une fois le code matplotlib utilisé pour tracer et afficher la courbe en foncti
 ### déterminer la hauteur max de la balle
 Pour les valeurs de la consigne, si on regarde sur le graph tracé avec matplotlib, on peut voir que la valeur maximum de y=15 pour x=10.
 L'exprimer par code revient donc à récupérer le maximum du tableau de y et sa valeur correspondante pour x.
+Une expression mathématique existe pour calculer la valeur de x lorsqu'on atteint la valeur maximale de y:
+$\frac{-b}{2a}$
+Et de cette manière, on a répondu à la question 3
 
+### Généralisation du problème et entrée utilisateur
+En utilisant le code de traceCourbe, on peut reprendre sur TrajectoireBallon_v2.py notre code, et le modifier pour que ce code trace une courbe en fonction d'une donnée en entrée.

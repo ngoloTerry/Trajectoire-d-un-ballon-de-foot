@@ -24,6 +24,7 @@ else:
 
 # Question 3 : sommet de la parabole
 x_sommet = -b / (2*a)
+
 y_max = a*x_sommet**2 + b*x_sommet + c
 print(f"Altitude maximale : {y_max:.2f} en x = {x_sommet:.2f}")
 
