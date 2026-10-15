@@ -26,13 +26,13 @@ Il m'a alors indiqué que:
 - La section "Code numpy" est un monolithe, et qu'il faut absolument le sous-diviser. Il est vrai que je n'ai même pas pensé à réfléchir ici en quelles foctions ce code entier risque d'être sectionné.
 - Il faut revoir ce qui est attendu que l'on comprenne, mathématiquement parlant, pour mieux améliorer sa résolution de problème.
 
-En appliquant ces conseils, j'ai décidé de recommencer de 0 (ou plutôt de 1) écrivant et isolant le code de la question 1 (code_resolution.py).  
+En appliquant ces conseils, j'ai décidé de recommencer de 0 (ou plutôt de 1) écrivant et isolant le code de la question 1 (*code_resolution.py*).  
 une fois fait, il fallait que je satisfasse la question 2 dans un autre fichier(traceCourbe), en réutilisant le code déjà tapé.
 
 ## 11/10/26
 ### découverte et application de la librairie MatPlotLib
 Dans le sandbox, j'ai importé une version fonctionelle du code, que je découpe en morceau pour en comprendre le fonctionnement.
-dans traceCourbe.py, j'essaye de le réécrire proprement d'une manière où je peux la faire fonctionner, avec des commentaires pour la relecture.
+dans *traceCourbe.py*, j'essaye de le réécrire proprement d'une manière où je peux la faire fonctionner, avec des commentaires pour la relecture.
 MatPlotLib, pour tracer une courbe, fait le lien entre des points renseignés sur un repère carthésien.
 pour tracer une courbe il faut donc 2 tableaux de valeurs: un avec les valeurs en ordonnée, l'autre avec les abscisses.
 pour remplir ces deux tableauxdes valeurs correspondantes, il nous faudra décider du nombre de valeurs, et calculer le pas entre chacun des points de coordonnées x[i]y[i]
@@ -51,4 +51,10 @@ $\frac{-b}{2a}$
 Et de cette manière, on a répondu à la question 3
 
 ### Généralisation du problème et entrée utilisateur
-En utilisant le code de traceCourbe, on peut reprendre sur TrajectoireBallon_v2.py notre code, et le modifier pour que ce code trace une courbe en fonction d'une donnée en entrée.
+En utilisant le code de traceCourbe, on peut reprendre sur *TrajectoireBallon_v2.py* notre code, et le modifier pour que ce code trace une courbe en fonction d'une donnée en entrée.
+
+
+## 15/10/26
+### Modification de *TrajectoireBallon_v2.py*
+J'ai transformé en procédures et fonctions la plupart des portions du code afin d'augmenter la lisibilité d'une part, mais aussi pour faciliter l'utilisation du code lorsqu'il faudra implémenter d'autres librairies pour la suite du projet.
+J'anticipe notamment *tkinter* principalement, et *canvas* éventuellement.
