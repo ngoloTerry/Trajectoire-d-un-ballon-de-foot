@@ -1,40 +1,36 @@
-import math as m
+# tutoriel: https://www.youtube.com/watch?v=lyoyTlltFVU&list=PLZPZq0r_RZOOeQBaP5SeMjl2nwDcJaV0T
 
-import matplotlib.pyplot as plt
+import tkinter as tkt
 
-a = float(input("entrez la valeur de a: "))
-b = float(input("entrez la valeur de b: "))
-c = float(input("entrez la valeur de c: "))
+# widgets = éléments de la fenêtre
+# window = la fenêtre remplie de widgets
 
-if a == 0:
-    print("a=0 : ce n'est pas une équation du second degré")
-    exit()
+# déclarations de paramètres et méthodes de la fenêtre
+window = Tk() # pour déclarer l'objet "fenêtre"
+window.geometry("500x500") # régler les dimensions
+window.title("3Dflamingo's First Program") # changer le titre de la fenêtre
 
-delta = b**2 - 4*a*c
+icon = PhotoImage(file="./flamingo.png")
+window.iconphoto(True,icon)
 
-if delta < 0:
-    print("Δ < 0 : pas de racine réelle, le ballon ne touche jamais le sol")
-    exit()
-elif delta == 0:
-    x_depart = x_arrivee = -b / (2*a)
-else:
-    r1 = (-b - m.sqrt(delta)) / (2*a)
-    r2 = (-b + m.sqrt(delta)) / (2*a)
-    x_depart, x_arrivee = min(r1, r2), max(r1, r2)
+# ajoute un contenu
+label1 = Label(
+    window,
+    text="Bisou ? 😘",
+    font=("Arial",40,"bold"),
+    bg="grey",
+    padx="20"
+)
+label2 = Label(
+    window,
+    text="Ouiii 💋💖",
+    font=("Arial",25)
+    
+)
 
-# Question 3 : sommet de la parabole
-x_sommet = -b / (2*a)
+label1.pack() # pose par défaut dans le top-centre
+label2.place(x=150,y=300)
 
-y_max = a*x_sommet**2 + b*x_sommet + c
-print(f"Altitude maximale : {y_max:.2f} en x = {x_sommet:.2f}")
 
-# Question 2 : tracé entre les deux racines
-N = 200
-pas = (x_arrivee - x_depart) / N # x_arrivee - x_depart = petite valeur
-x = [x_depart + i*pas for i in range(N + 1)]
-y = [a*xi**2 + b*xi + c for xi in x]
-
-plt.plot(x, y)
-plt.xlabel("x (distance)")
-plt.ylabel("y (altitude)")
-plt.show()
+# afficher la fenêtre
+window.mainloop() 

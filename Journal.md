@@ -58,3 +58,4 @@ En utilisant le code de traceCourbe, on peut reprendre sur *TrajectoireBallon_v2
 ### Modification de *TrajectoireBallon_v2.py*
 J'ai transformé en procédures et fonctions la plupart des portions du code afin d'augmenter la lisibilité d'une part, mais aussi pour faciliter l'utilisation du code lorsqu'il faudra implémenter d'autres librairies pour la suite du projet.
 J'anticipe notamment *tkinter* principalement, et *canvas* éventuellement.
+Je prépare déjà tkinter dans le *sandbox.py* pour faire un template, tout en apprenant à l'utiliser.
