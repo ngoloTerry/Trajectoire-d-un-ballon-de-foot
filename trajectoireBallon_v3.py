@@ -48,21 +48,19 @@ def calc_y(a,b,c,x):
 # __Fonction qui trace la courbe__
 def trajectoireBallon(a,b,c):
 
+    if a >= 0:
+        raise ValueError("a doit être négatif pour une trajectoire en cloche")
+
     d = b**2 - 4*a*c
 
-    # y n'admet aucune solution si d est negatif
-    if d < 0:
-        print("Δ < 0 : pas de racine réelle, le ballon ne touche jamais le sol")
-        exit() # /!\ On quitte le programme ici
+    if d <= 0:
+        raise ValueError("Δ ≤ 0 : le ballon ne touche pas le sol")
 
-    elif d == 0:
-        r0 = calc_racine0(a,b)
-    else:
-        r1 = calc_racine1(a,b,d)
-        r2 = calc_racine2(a,b,d)
-        # on conserve en variables le point de départ du ballon, et l'endroit où il retouche le sol
-        x_depart = min(r1,r2)
-        x_arrivee = max(r1,r2)
+    r1 = calc_racine1(a,b,d)
+    r2 = calc_racine2(a,b,d)
+    # on conserve en variables le point de départ du ballon, et l'endroit où il retouche le sol
+    x_depart = min(r1,r2)
+    x_arrivee = max(r1,r2)
 
     # Question 2 : tracé entre les deux racines avec matplotlib
 
@@ -172,8 +170,8 @@ valeurC.place(x=50,y=525)
 # buttonC.place(x=50,y=550)
 
 buttonStart.place(x=500,y=800)
-
-window.iconphoto(True,icon)
+window.update()
+window.iconphoto(True, icon)
 
 # afficher la fenêtre
 window.mainloop() 

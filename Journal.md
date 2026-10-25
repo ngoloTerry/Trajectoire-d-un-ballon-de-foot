@@ -68,3 +68,6 @@ J'ai pu avoir le template pour la fenêtre désirée: l'apparenc me convient en 
 sandbox.py ouvre une fenêtre avec 3 champs, pour a, b et c, un bouton valider et l'espace apperçu. Il devra afficher la courbe correspondante si les conditions sont favorables, ou un message d'erreur sera indiqué autrement.
 ### TrajectoireBallon_V3 (version finale)
 Il reste encore des choses à finir dans ce programme, mais il fonctionne déjà bien pour s'assurer que l'utilisateur ne mette que des valeurs numériques d'une part, puis trace la courbe tant que le la valeur de a est négative.
+J'ai pu corriger le code pour ne plus faire planter le programme: il suffit de ne pas executer "exit()" en cas d'erreur, mais de relever l'erreur et de faire afficher l'image correspondante.
+
+Le programme est donc enfin terminé. Il ne reste plus qu'à préparer la présentation.
