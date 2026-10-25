@@ -59,3 +59,12 @@ En utilisant le code de traceCourbe, on peut reprendre sur *TrajectoireBallon_v2
 J'ai transformé en procédures et fonctions la plupart des portions du code afin d'augmenter la lisibilité d'une part, mais aussi pour faciliter l'utilisation du code lorsqu'il faudra implémenter d'autres librairies pour la suite du projet.
 J'anticipe notamment *tkinter* principalement, et *canvas* éventuellement.
 Je prépare déjà tkinter dans le *sandbox.py* pour faire un template, tout en apprenant à l'utiliser.
+
+
+### 25/10/26
+### Création d'une fenêtre dans le sandbox
+Après avoir regardé le tutoriel et après des essais nombreux, j'ai surveillé l'horloge et ai réalisé qu'il fallait que je boucle le projet.
+J'ai pu avoir le template pour la fenêtre désirée: l'apparenc me convient en l'état et le fonctionnement ne manque plus que l'entrée utilisateur.
+sandbox.py ouvre une fenêtre avec 3 champs, pour a, b et c, un bouton valider et l'espace apperçu. Il devra afficher la courbe correspondante si les conditions sont favorables, ou un message d'erreur sera indiqué autrement.
+### TrajectoireBallon_V3 (version finale)
+Il reste encore des choses à finir dans ce programme, mais il fonctionne déjà bien pour s'assurer que l'utilisateur ne mette que des valeurs numériques d'une part, puis trace la courbe tant que le la valeur de a est négative.

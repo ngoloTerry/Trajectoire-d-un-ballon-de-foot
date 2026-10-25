@@ -5,8 +5,6 @@ from tkinter import *
 # window = la fenêtre remplie de widgets
 
 # valeurs constantes
-W_HEIGHT = 700
-W_WIDTH = 700
 count = 0
 
 # Méthodes

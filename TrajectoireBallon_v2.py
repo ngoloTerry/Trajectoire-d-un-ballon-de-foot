@@ -9,7 +9,6 @@ import math as m
 
 import matplotlib.pyplot as plt
 
-print("hello!")
 # definition de fonctions mathématiques
 
 def calc_racine0(a,b): # si delta=0, il n'y a qu'une racine et est renvoyée par cette fonction
@@ -77,6 +76,7 @@ def trajectoireBallon(a,b,c,d):
     plt.plot(x, y)
     plt.xlabel("x (distance)")
     plt.ylabel("y (altitude)")
+    plt.savefig("courbe.png")
     plt.show()
 
 
